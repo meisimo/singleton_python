@@ -101,7 +101,7 @@ class Menu:
 
         try:
             document = self._input_document()
-            state    = self._input_vaccinated
+            state    = self._input_vaccinated()
 
             self.people_manager.update_person_vaccinated_status(document, state)
         except KeyError:
