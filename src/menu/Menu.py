@@ -81,9 +81,10 @@ class Menu:
         print("\x1b[1,32m"+"----------------------------------------"+'\033[0m')
         print("\x1b[1,32m"+"            Consultar Listado          "+'\033[0m')
         print("\x1b[1,32m"+"----------------------------------------"+'\033[0m')
-
+        print(self.people_manager.get_people())
 
     def imprimir_log(self):
         print("\x1b[1,32m"+"----------------------------------------"+'\033[0m')
         print("\x1b[1,32m"+"            Imprimir Log                "+'\033[0m')
         print("\x1b[1,32m"+"----------------------------------------"+'\033[0m') 
+        print(self.people_manager.get_log())
