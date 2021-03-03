@@ -23,4 +23,4 @@ class Person():
     self._vaccinated = vaccinated
 
   def __str__(self):
-    return self._name + " / " + self._document + " / " + self._birthday.strftime("%d/%m/%Y") + " / " + "S" if self._vaccinated else "N"
+    return self._name + " / " + self._document + " / " + self._birthday.strftime("%d/%m/%Y") + " / " + ("S" if self._vaccinated else "N")
