@@ -23,7 +23,7 @@ class People():
     Returns:
       (Person): person
     """
-    return self.__people.get(document)
+    return self.__people[document]
 
   def get_people(self):
     return self.__people.values()
@@ -45,4 +45,4 @@ class People():
     Args:
         document ([str]): [description]
     """
-    self.__people.pop(document, None)
+    del self.__people['document']
