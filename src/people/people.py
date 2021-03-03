@@ -45,4 +45,4 @@ class People():
     Args:
         document ([str]): [description]
     """
-    del self.__people['document']
+    del self.__people[document]
