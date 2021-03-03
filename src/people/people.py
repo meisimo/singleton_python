@@ -24,6 +24,9 @@ class People():
       (Person): person
     """
     return self.__people.get(document)
+
+  def get_people(self):
+    return self.__people
     
   def insert_person(self, document, name, birthday, vaccinated):
     """Insert a person in the people map

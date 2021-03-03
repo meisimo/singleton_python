@@ -15,6 +15,10 @@ class PeopleManager():
     People.get_instance().remove_person(document)
     LogManager.get_instance().insert_action('Remueve persona', document)
 
+  def get_person(self):
+    LogManager.get_instance().insert_action('Listar personas', '')
+    return "NOMBRE / DOCUMENTO / CUMPLEAÑOS / VACUNADO \n" + "\n".join( str(p) for p in People.get_people() )
+
   def get_log(self):
     return LogManager.get_instance().get_log()
     
