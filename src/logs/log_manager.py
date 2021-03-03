@@ -1,4 +1,4 @@
-from action import Action
+from .action import Action
 
 class LogManager():
   _log_header = f"{'ACCION':30s} | {'DOCUMENTO':15s} | FECHA"
