@@ -64,9 +64,12 @@ class Menu:
         print("\x1b[1,32m"+"----------------------------------------"+'\033[0m')
 
         document = input("Documento: ")
-        state = input("Nuevo Estado S/N: ")
+        state    = input("Nuevo Estado S/N: ")
 
-        self.people_manager.update_person_vaccinated_status(document, state=="S")
+        try:
+            self.people_manager.update_person_vaccinated_status(document, state=="S")
+        except KeyError:
+            print(f"El documneot {document} no se encuentra en el registro")
 
     def excluir_persona(self):
         print("\x1b[1,32m"+"----------------------------------------"+'\033[0m')
@@ -75,7 +78,10 @@ class Menu:
 
         document = input("Documento: ")
 
-        self.people_manager.exclude_person(document)
+        try:
+            self.people_manager.exclude_person(document)
+        except KeyError:
+            print(f"El documneot {document} no se encuentra en el registro")
     
     def consultar_listado(self):
         print("\x1b[1,32m"+"----------------------------------------"+'\033[0m')
